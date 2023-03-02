@@ -10,14 +10,14 @@ export default class App extends React.Component {
             mount: true,
             ignoreProp: 0,
             seed: 30,
-            showErrorComponenet: false,
+            showErrorComponent: false,
         }
         this.mountCounter = () => this.setState({mount: true});
         this.unMountCounter = () => this.setState({mount: false});
         
         this.ignoreProp = () => this.setState({ ignoreProp: Math.random() });
         this.seedGenerator = () => this.setState({ seed: Number.parseInt(Math.random() * 100) });
-        this.toggleError = () => this.setState({ showErrorComponenet: !this.state.showErrorComponenet });
+        this.toggleError = () => this.setState({ showErrorComponent: !this.state.showErrorComponenet });
     }
    render() {
     return (
@@ -31,7 +31,7 @@ export default class App extends React.Component {
            <Counter
            ignoreProp={this.state.ignoreProp} 
            seed={this.state.seed}
-           showErrorComponenet={this.state.showErrorComponenet} /> : 
+           showErrorComponent={this.state.showErrorComponent} /> : 
            null }
         </div>
     )
